@@ -14,24 +14,37 @@
  * limitations under the License.
  */
 
-package org.wso2.carbon.identity.mgt.exception;
+package org.wso2.carbon.identity.mgt.impl.internal.config.domain;
+
+import java.util.Collections;
+import java.util.Map;
 
 /**
- * This class represents a UserImpl not found exception.
- *
- * @since 1.0.0
+ * Unique Id Resolver Config Entry.
  */
-public class UserNotFoundException extends Exception {
+public class UniqueIdResolverConfigEntry {
 
-    public UserNotFoundException() {
-        super();
+    private String type;
+
+    private Map<String, String> properties;
+
+    public String getType() {
+        return type;
     }
 
-    public UserNotFoundException(String message) {
-        super(message);
+    public void setType(String type) {
+        this.type = type;
     }
 
-    public UserNotFoundException(String message, Throwable throwable) {
-        super(message, throwable);
+    public Map<String, String> getProperties() {
+
+        if (properties == null) {
+            return Collections.emptyMap();
+        }
+        return properties;
+    }
+
+    public void setProperties(Map<String, String> properties) {
+        this.properties = properties;
     }
 }

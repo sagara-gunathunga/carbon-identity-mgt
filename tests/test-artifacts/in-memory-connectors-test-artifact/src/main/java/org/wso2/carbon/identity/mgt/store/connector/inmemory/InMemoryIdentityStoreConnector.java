@@ -17,7 +17,7 @@
 package org.wso2.carbon.identity.mgt.store.connector.inmemory;
 
 import org.wso2.carbon.identity.mgt.bean.Attribute;
-import org.wso2.carbon.identity.mgt.config.IdentityStoreConnectorConfig;
+import org.wso2.carbon.identity.mgt.impl.config.IdentityStoreConnectorConfig;
 import org.wso2.carbon.identity.mgt.exception.GroupNotFoundException;
 import org.wso2.carbon.identity.mgt.exception.IdentityStoreConnectorException;
 import org.wso2.carbon.identity.mgt.exception.UserNotFoundException;
@@ -59,7 +59,7 @@ public class InMemoryIdentityStoreConnector implements IdentityStoreConnector {
             IdentityStoreConnectorException {
 
         if (userStoreMap.size() == 0) {
-            throw new UserNotFoundException("User not found.");
+            throw new UserNotFoundException("UserImpl not found.");
         }
 
         Optional<Map.Entry<String, List<Attribute>>> mapEntry = userStoreMap.entrySet().stream()
@@ -76,7 +76,7 @@ public class InMemoryIdentityStoreConnector implements IdentityStoreConnector {
         if (mapEntry.isPresent()) {
             return mapEntry.get().getKey();
         }
-        throw new UserNotFoundException("User not found.");
+        throw new UserNotFoundException("UserImpl not found.");
     }
 
     @Override
@@ -148,7 +148,7 @@ public class InMemoryIdentityStoreConnector implements IdentityStoreConnector {
             IdentityStoreConnectorException {
 
         if (groupStoreMap.size() == 0) {
-            throw new GroupNotFoundException("Group not found.");
+            throw new GroupNotFoundException("GroupImpl not found.");
         }
 
         Optional<Map.Entry<String, List<Attribute>>> mapEntry = groupStoreMap.entrySet().stream()
@@ -165,7 +165,7 @@ public class InMemoryIdentityStoreConnector implements IdentityStoreConnector {
         if (mapEntry.isPresent()) {
             return mapEntry.get().getKey();
         }
-        throw new GroupNotFoundException("Group not found.");
+        throw new GroupNotFoundException("GroupImpl not found.");
     }
 
     @Override

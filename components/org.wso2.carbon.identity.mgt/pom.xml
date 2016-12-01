@@ -118,9 +118,9 @@
     </dependencies>
 
     <properties>
-        <private.package>org.wso2.carbon.identity.mgt.internal</private.package>
+        <private.package>org.wso2.carbon.identity.mgt.impl.internal</private.package>
         <export.package>
-            !org.wso2.carbon.identity.mgt.internal,
+            !org.wso2.carbon.identity.mgt.impl.internal,
             org.wso2.carbon.identity.mgt.*;version="${project.version}"
         </export.package>
         <import.package>

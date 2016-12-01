@@ -48,7 +48,7 @@
             org.slf4j.*;version="${slf4j.logging.package.import.version.range}",
             javax.security.auth.*,
             org.osgi.service.component.annotations.*;version="${org.osgi.service.component.annotations.version.range}",
-            org.wso2.carbon.identity.mgt.config.*;version="${org.wso2.carbon.identity.mgt.version.range}",
+            org.wso2.carbon.identity.mgt.impl.config.*;version="${org.wso2.carbon.identity.mgt.version.range}",
             org.wso2.carbon.identity.mgt.exception.*;version="${org.wso2.carbon.identity.mgt.version.range}",
             org.wso2.carbon.identity.mgt.store.connector.*;version="${org.wso2.carbon.identity.mgt.version.range}",
             org.wso2.carbon.identity.mgt.bean.*;version="${org.wso2.carbon.identity.mgt.version.range}",

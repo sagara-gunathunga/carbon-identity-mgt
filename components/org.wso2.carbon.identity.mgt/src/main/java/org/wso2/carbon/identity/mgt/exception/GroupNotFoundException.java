@@ -17,7 +17,7 @@
 package org.wso2.carbon.identity.mgt.exception;
 
 /**
- * This class represents a Group Not Found exception.
+ * This class represents a GroupImpl Not Found exception.
  *
  * @since 1.0.0
  */

@@ -14,24 +14,17 @@
  * limitations under the License.
  */
 
-package org.wso2.carbon.identity.mgt.exception;
+package org.wso2.carbon.identity.mgt.connector;
 
 /**
- * This class represents a UserImpl not found exception.
- *
- * @since 1.0.0
+ * Factory to create @see CredentialStoreConnector instances.
  */
-public class UserNotFoundException extends Exception {
+public interface CredentialStoreConnectorFactory {
 
-    public UserNotFoundException() {
-        super();
-    }
-
-    public UserNotFoundException(String message) {
-        super(message);
-    }
-
-    public UserNotFoundException(String message, Throwable throwable) {
-        super(message, throwable);
-    }
+    /**
+     * Get @see CredentialStoreConnector instance.
+     *
+     * @return CredentialStoreConnector.
+     */
+    CredentialStoreConnector getInstance();
 }

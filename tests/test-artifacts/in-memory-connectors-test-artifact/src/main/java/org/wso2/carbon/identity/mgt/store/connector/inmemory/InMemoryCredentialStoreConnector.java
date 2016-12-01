@@ -16,7 +16,7 @@
 
 package org.wso2.carbon.identity.mgt.store.connector.inmemory;
 
-import org.wso2.carbon.identity.mgt.config.CredentialStoreConnectorConfig;
+import org.wso2.carbon.identity.mgt.impl.config.CredentialStoreConnectorConfig;
 import org.wso2.carbon.identity.mgt.exception.AuthenticationFailure;
 import org.wso2.carbon.identity.mgt.exception.CredentialStoreConnectorException;
 import org.wso2.carbon.identity.mgt.store.connector.CredentialStoreConnector;

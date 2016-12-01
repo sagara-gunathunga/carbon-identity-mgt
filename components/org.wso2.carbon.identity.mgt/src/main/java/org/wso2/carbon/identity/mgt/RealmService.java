@@ -14,24 +14,26 @@
  * limitations under the License.
  */
 
-package org.wso2.carbon.identity.mgt.exception;
+package org.wso2.carbon.identity.mgt;
+
+import org.wso2.carbon.identity.mgt.store.IdentityStore;
 
 /**
- * This class represents a UserImpl not found exception.
- *
- * @since 1.0.0
+ * UserImpl realm service.
  */
-public class UserNotFoundException extends Exception {
+public interface RealmService {
 
-    public UserNotFoundException() {
-        super();
-    }
+//    /**
+//     * Get the Virtual authorization store.
+//     *
+//     * @return AuthorizationStoreConnector
+//     */
+//    AuthorizationStore getAuthorizationStore();
 
-    public UserNotFoundException(String message) {
-        super(message);
-    }
-
-    public UserNotFoundException(String message, Throwable throwable) {
-        super(message, throwable);
-    }
+    /**
+     * Get the identity store instance.
+     *
+     * @return Identity Store
+     */
+    IdentityStore getIdentityStore();
 }

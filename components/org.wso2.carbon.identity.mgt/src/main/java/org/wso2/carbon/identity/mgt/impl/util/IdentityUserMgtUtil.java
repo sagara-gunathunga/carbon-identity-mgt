@@ -14,24 +14,31 @@
  * limitations under the License.
  */
 
-package org.wso2.carbon.identity.mgt.exception;
+package org.wso2.carbon.identity.mgt.impl.util;
+
+import java.util.UUID;
 
 /**
- * This class represents a UserImpl not found exception.
- *
- * @since 1.0.0
+ * Identity Management Util.
  */
-public class UserNotFoundException extends Exception {
+public class IdentityUserMgtUtil {
 
-    public UserNotFoundException() {
-        super();
+    private IdentityUserMgtUtil() {
+
     }
 
-    public UserNotFoundException(String message) {
-        super(message);
+    /**
+     * Generate UUID.
+     *
+     * @return UUID as a string.
+     */
+    public static String generateUUID() {
+
+        String random = UUID.randomUUID().toString();
+        random = random.replace("/", "_");
+        random = random.replace("=", "a");
+        random = random.replace("+", "f");
+        return random;
     }
 
-    public UserNotFoundException(String message, Throwable throwable) {
-        super(message, throwable);
-    }
 }

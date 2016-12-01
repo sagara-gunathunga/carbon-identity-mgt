@@ -14,24 +14,18 @@
  * limitations under the License.
  */
 
-package org.wso2.carbon.identity.mgt.exception;
+package org.wso2.carbon.identity.mgt.impl.user;
 
 /**
- * This class represents a UserImpl not found exception.
- *
- * @since 1.0.0
+ * Unique Id Resolver Factory.
  */
-public class UserNotFoundException extends Exception {
+public interface UniqueIdResolverFactory {
 
-    public UserNotFoundException() {
-        super();
-    }
+    /**
+     * Get @see UniqueIdResolver instance.
+     *
+     * @return UniqueIdResolver.
+     */
+    UniqueIdResolver getInstance();
 
-    public UserNotFoundException(String message) {
-        super(message);
-    }
-
-    public UserNotFoundException(String message, Throwable throwable) {
-        super(message, throwable);
-    }
 }

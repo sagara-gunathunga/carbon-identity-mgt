@@ -14,24 +14,21 @@
  * limitations under the License.
  */
 
-package org.wso2.carbon.identity.mgt.exception;
+package org.wso2.carbon.identity.mgt;
+
 
 /**
- * This class represents a UserImpl not found exception.
- *
- * @since 1.0.0
+ * This class represents AuthenticationContext which holds the information related to the authenticated user.
  */
-public class UserNotFoundException extends Exception {
+public class AuthenticationContext {
 
-    public UserNotFoundException() {
-        super();
+    private User user;
+
+    public AuthenticationContext(User user) {
+        this.user = user;
     }
 
-    public UserNotFoundException(String message) {
-        super(message);
-    }
-
-    public UserNotFoundException(String message, Throwable throwable) {
-        super(message, throwable);
+    public User getUser() {
+        return user;
     }
 }

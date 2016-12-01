@@ -28,10 +28,10 @@ import org.testng.annotations.Test;
 import org.wso2.carbon.identity.mgt.bean.Domain;
 import org.wso2.carbon.identity.mgt.exception.DomainException;
 import org.wso2.carbon.identity.mgt.exception.IdentityStoreException;
-import org.wso2.carbon.identity.mgt.internal.IdentityMgtDataHolder;
+import org.wso2.carbon.identity.mgt.impl.internal.IdentityMgtDataHolder;
 import org.wso2.carbon.identity.mgt.service.RealmService;
 import org.wso2.carbon.identity.mgt.store.IdentityStore;
-import org.wso2.carbon.identity.mgt.store.impl.IdentityStoreImpl;
+import org.wso2.carbon.identity.mgt.impl.connector.IdentityStoreImpl;
 import org.wso2.carbon.security.caas.user.core.store.AuthorizationStore;
 
 import java.util.ArrayList;
